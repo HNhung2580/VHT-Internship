@@ -47,7 +47,7 @@ void *sample_func(void *arg)
 // INPUT
 void *input_func(void *arg)
 {
-  for(int i = 0; ; i++)
+  while(1)
   {
     pthread_mutex_lock(&mutex);
     FILE *f;
@@ -69,7 +69,7 @@ void *input_func(void *arg)
 //LOGGING
 void *logging_func(void *arg)
 {
-  for(int i = 0; ; i++)
+  while(1)
   {
     FILE *f;
     f = fopen("time_and_interval.txt","a+");
